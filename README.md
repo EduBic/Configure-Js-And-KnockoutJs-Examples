@@ -1,1 +1,1 @@
-Configure-Js-And-KnockoutJs-Examples
+Js-KnockoutJs-Example
