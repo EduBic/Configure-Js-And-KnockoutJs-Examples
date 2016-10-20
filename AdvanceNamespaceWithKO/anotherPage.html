@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Gulp with KO</title>
+        
+        <!-- JavaScript library: TO-DO change with online reference -->
+        <script type="text/javascript" src="js/lib/jquery-3.1.1.js"></script>
+        <script type="text/javascript" src="js/lib/knockout-3.4.0.js"></script>
+        
+        <!-- Bootstrap link -->
+        
+        <!-- My Javascript -->
+        <script type="text/javascript" src="js/init.js"></script>
+        <script type="text/javascript" src="js/base.js"></script>
+        <script type="text/javascript" src="js/anotherVM.js"></script>
+        
+    </head>
+
+    <body>
+        
+        <div id="nav">
+            <ul>
+                <li><a href="index.html">Index</a></li>
+                <li><a href="page.html">Simple Page</a></li>
+                <li><a href="anotherPage.html">Another Page</a></li>
+                <li><a href="newPage.html">New Page</a></li>
+            </ul>
+        </div>
+        
+        <div id="content">       
+            
+            <h1 data-bind="text: field"></h1> <!-- It works! -->
+            
+            <p>Namespace: MyApp.ViewModels.anotherVM</p>
+            
+            <input id="btn" type="button" data-bind="value: button, click: internalFunction"> <!-- NOT works! -->
+            
+            
+            <input id="btn2" type="button" data-bind="value: button, click: MyApp.ViewModels.anotherVM.externalFunction"> <!-- It works! -->
+            
+            <!-- <input id="btn" type="button" data-bind="value: button, click: internalFunction"> NOT works! (ERROR) -->
+            
+        </div>
+        
+
+        <!-- run code -->
+        <script>
+            ko.applyBindings(new MyApp.ViewModels.anotherVM);
+        </script>
+        
+    </body>
+    
+</html>
