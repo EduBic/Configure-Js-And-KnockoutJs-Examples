@@ -34,12 +34,9 @@
             
             <p>Namespace: MyApp.ViewModels.anotherVM</p>
             
-            <input id="btn" type="button" data-bind="value: button, click: internalFunction"> <!-- NOT works! -->
-            
+            <input id="btn" type="button" data-bind="value: button, click: internalFunction"> <!-- It works! -->
             
             <input id="btn2" type="button" data-bind="value: button, click: MyApp.ViewModels.anotherVM.externalFunction"> <!-- It works! -->
-            
-            <!-- <input id="btn" type="button" data-bind="value: button, click: internalFunction"> NOT works! (ERROR) -->
             
         </div>
         

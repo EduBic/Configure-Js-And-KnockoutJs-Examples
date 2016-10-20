@@ -44,25 +44,6 @@
 
         <!-- run code -->
         <script>
-            
-            var embedeedVM = function () {
-              var self = this;
-                
-                self.field = "fake title";
-                
-                self.button = "fake press";
-                
-                self.internalFunction = function () {
-                    console.log("fake internalFunction()");
-                };
-            };
-            
-            embedeedVM.externalFunction = function () {
-                console.log("fake externalFunction()");
-            };
-            
-            //ko.applyBindings(new embedeedVM);
-            //ko.applyBindings(new MyApp.ViewModels.anotherVM);
             ko.applyBindings(new MyApp.simpleVM);
         </script>
         
