@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Gulp with KO</title>
+        
+        <!-- JavaScript library: TO-DO change with online reference -->
+        <script type="text/javascript" src="js/lib/jquery-3.1.1.js"></script>
+        <script type="text/javascript" src="js/lib/knockout-3.4.0.js"></script>
+        
+        <!-- Bootstrap link -->
+        
+        <!-- My Javascript -->
+        <script type="text/javascript" src="js/init.js"></script>
+        <script type="text/javascript" src="js/base.js"></script>
+        <script type="text/javascript" src="js/indexVM.js"></script>
+        
+    </head>
+
+    <body>
+        
+        <div id="nav">
+            <ul>
+                <li><a href="index.html">Index</a></li>
+                <li><a href="anotherPage.html">Another Page</a></li>
+                <li><a href="newPage.html">New Page</a></li>
+            </ul>
+        </div>
+        
+        <div id="content">       
+            
+            <h1 data-bind="text: field"></h1>
+            
+            <p>This page called automatic function of MyApp.ViewModels.templateVM that call a function of MyApp.Base</p>
+            
+        </div>
+        
+
+        <!-- run code -->
+        <script>
+            ko.applyBindings(new MyApp.ViewModels.indexVM);
+        </script>
+        
+    </body>
+    
+</html>
